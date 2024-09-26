@@ -6,4 +6,4 @@
   - name: code to install apache web server
     yum:
      name: httpd
-     status: present
+     state: present
