@@ -1,6 +1,6 @@
 -
  name: pb on use case of variables concept
- hosts: all
+ hosts: 1,2,3
  become: yes
  vars:
   a: 10
