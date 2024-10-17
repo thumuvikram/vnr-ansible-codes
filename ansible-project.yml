@@ -1,0 +1,50 @@
+-
+ name: pb on use case of ansible-project
+ hosts: all
+ become: yes
+ tasks:
+  - name: code to install httpd
+    yum:
+     name: httpd
+     state: present
+
+  - name: code to start httpd service
+    service:
+     name: httpd
+     state: started
+
+  - name: code to enable httpd at boot time
+    service:
+     name: httpd
+     enabled: yes
+
+  - name: code to create a directory
+    file:
+     path: /opt/apache-logs
+     state: directory
+
+  - name: code to create a file
+    file:
+     path: /opt/apache-logs/apache-logs.logs
+     state: touch
+
+  - name: code to write message into file
+    lineinfile:
+     dest: /opt/apache-logs/apache-logs.logs
+     line: 'APACHE IS SUCCESSFULLY INSTALLED'
+
+  - name: code to create a index.html file
+    file:
+     path: /var/www/html/index.html
+     state: touch
+
+  - name: code to write html code
+    lineinfile:
+     dest: /var/www/html/index.html
+     line: '<html>
+     <body>
+     <h1> ANSIBLE PROJECT </h1>
+     </body>
+     </html>'
+
+     
