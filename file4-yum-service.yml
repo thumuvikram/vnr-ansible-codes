@@ -8,4 +8,7 @@
      name: docker
      state: latest
 
-     
+  - name: Start service docker, if not started
+    service:
+     name: docker
+     state: started
