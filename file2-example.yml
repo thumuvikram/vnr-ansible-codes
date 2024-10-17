@@ -3,7 +3,7 @@
  hosts: all
  become: yes
  tasks:
-  - name: code to install apache web server
+  - name: code to install finger command
     yum:
-     name: httpd-2.4.62-1.amzn2023.src.rpm
-     state: absent
+     name: finger
+     state: present
