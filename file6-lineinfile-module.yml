@@ -1,0 +1,10 @@
+-
+ name: pb on use case of lineinfile module
+ hosts: all
+ become: yes
+ tasks:
+  - name: code to edit the message in a file
+    lineinfile:
+     path: /opt/ts/hyderabad.txt
+     regexp: 'HELLO WORLD'
+     line: 'PYTHON IS A LANUGUAGE'
