@@ -5,5 +5,5 @@
  tasks:
   - name: code to install apache web server
     yum:
-     name: httpd
+     name: httpd-2.4.62-1.amzn2023.src.rpm
      state: absent
